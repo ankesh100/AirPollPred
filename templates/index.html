@@ -2,29 +2,21 @@
 <html>
 
 <head>
-    <title>Air Pollution level</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
-        crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-        crossorigin="anonymous"></script>
-    <style>
-        body {
-            background: rgba(15, 136, 250, 0.884);
-            background: -webkit-linear-gradient(to right, rgba(15, 136, 250, 0.884), rgba(34, 255, 134, 0.8));
-            background: linear-gradient(to right, rgba(15, 136, 250, 0.884), rgba(34, 255, 134, 0.8));
-        }
- 
-       
+   
+ <title>Air Pollution level</title>
 
-    </style>
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/bootstrap.min.css') }}"> 
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/font-awesome.min.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/magnific-popup.css') }}">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+
 </head>
 
 <body>
     <div class="container">
         <div class="header">
-            <h1 style="text-align:center; border 2px solid white;">Fill meterological data to get PM2.5 level:</h1>
+            <h2 style="text-align:center; border 1px solid green;">Fill meteorological data to get PM2.5 level:</h2>
         </div>
         <hr/>
         <br/>
@@ -32,17 +24,27 @@
 
 
             <div class="form-group">
-                <input class="form-control" type="text" name="inp1" placeholder="temperature(C)" />
-                <input class="form-control" type="text" name="inp2" placeholder="humidity" />
-                <input class="form-control" type="text" name="inp3" placeholder="pressure" />
-                <input class="form-control" type="text" name="inp4" placeholder="dewpoint" />
-                <input class="form-control" type="text" name="inp5" placeholder="precipitation" />
-                <input class="form-control" type="text" name="inp6" placeholder="NW wind speed" />
-                <input class="form-control" type="text" name="inp7" placeholder="NE wind speed" />
-                <input class="form-control" type="text" name="inp8" placeholder="SE wind speed" />
-                <input class="form-control" type="text" name="inp9" placeholder="SW wind speed" />
+		<table style="width:100%">
+		<th style="text-align:left">
+                <input class="form-control" type="text" name="inp1" placeholder="temperature(F)" />
+                <input class="form-control" type="text" name="inp2" placeholder="humidity(%)" />
+                <input class="form-control" type="text" name="inp3" placeholder="pressure(hPa)" />
+                <input class="form-control" type="text" name="inp4" placeholder="dewpoint(F)" />
+                <input class="form-control" type="text" name="inp5" placeholder="precipitation(%)" />
+                <input class="form-control" type="text" name="inp6" placeholder="NW wind speed(m/s)" />
+                <input class="form-control" type="text" name="inp7" placeholder="NE wind speed(m/s)" />
+                <input class="form-control" type="text" name="inp8" placeholder="SE wind speed(m/s)" />
+                <input class="form-control" type="text" name="inp9" placeholder="SW wind speed(m/s)" />
                 <br/>
                 <input class="btn btn-block btn-success" type="submit" value="Submit" />
+		</th>
+		<th style="text-align:center">
+		<a class="twitter-timeline" data-width="300" data-height="400" href="https://twitter.com/CPCB_OFFICIAL?ref_src=twsrc%5Etfw">Tweets by CPCB_OFFICIAL</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</th>
+		<th style="text-align:right">
+		<a class="twitter-timeline" data-width="320" data-height="400" data-theme="light" href="https://twitter.com/WHO?ref_src=twsrc%5Etfw">Tweets by WHO</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</th>
+		</table>
             </div>
         </form>
     </div>
